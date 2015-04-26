@@ -1,4 +1,16 @@
-# GettingandCleaningData_Assignment
+GettingandCleaningData_Assignment
+
+How the script works
+1. Downloads the necessary R libraries
+2. The folder UCI HAR Dataset should be set as the working directory. File names should not change
+3. The script works by firstly putting together the Subject ID
+4. 
+
+Data Code book:
+1. "subject" - refers to the subject id
+2. "activity" - refers to the 6 activities conducted by the subjects. This is taken from the file "activity_labels.txt". This inludes the following: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING.
+3. The remaining variables gives the average of the mean and standard deviations of each measurment by subject and activity. Variables with "mean" in the text refers to the mean of the measurement. Variables with "std" refers to the standard deviaton of each measurement.
+
 
 List of variables are as follows:
  [1] "subject"                         "activity"                       
