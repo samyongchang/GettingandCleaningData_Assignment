@@ -50,6 +50,8 @@ fBodyGyroJerkMag
 
 
 List of variables are as follows:
+
+
  [1] "subject"                         "activity"                       
  [3] "tBodyAcc.mean...X"               "tBodyAcc.mean...Y"              
  [5] "tBodyAcc.mean...Z"               "tBodyAcc.std...X"               
