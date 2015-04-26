@@ -13,14 +13,15 @@ How the script works:
 
 1. Downloads the necessary R libraries
 2. The folder UCI HAR Dataset should be set as the working directory. File names should not change
-3. The script works by firstly putting together the Subject ID and activity 
-4. 
+3. The script works by firstly putting together the Subject ID, activity and features that measure the mean and standard deviation for the train dataset. The same is then done for the test dataset. Subsequently the two datasets are merged. Using the melt and then the dcast function, the final dataset finally restructures the data by Subject, Activity and the mean of the measurements.
+
 
 Data Description:
+
 1. "subject" - refers to the subject id
 2. "activity" - refers to the 6 activities conducted by the subjects. This is taken from the file "activity_labels.txt". This inludes the following: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING.
 3. The remaining variables gives the average of the mean and standard deviations of each measurment by subject and activity. Variables with "mean" in the text refers to the mean of the measurement. Variables with "std" refers to the standard deviaton of each measurement. 
-4. The measurements come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+4. [Excerpt from the "features_info.txt" file provided in the UCI HAR Dataset which helps to describe what each of the measurement variables are.] The features come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
 Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
 
